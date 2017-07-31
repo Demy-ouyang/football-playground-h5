@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <title>球场列表</title>
+    <link rel="stylesheet" href="js/swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+<div class="wrap foot-fixed">
+    <div class="content ">
+        <!-- Swiper -->
+        <div class="swiper-container pic-list">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/bg1.jpg"/></div>
+                <div class="swiper-slide"><img src="images/bg1.jpg"/></div>
+                <div class="swiper-slide"><img src="images/bg1.jpg"/></div>
+                <div class="swiper-slide"><img src="images/bg1.jpg"/></div>
+                <div class="swiper-slide"><img src="images/bg1.jpg"/></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+        <div class="ground-panel cuuju-cells">
+            <div class="panel-body">
+                <h3 class="panel-h3">北京海淀区鸟巢国家体育馆<a href="discount.html" class="tag bg-red2 fr">优惠券</a></h3>
+                <p class="price"><em class="price-tag">金额</em> <span>￥240</span>元起</p>
+                <p class="ground-bar">
+                    <span class="ground-span"><i class="icon-statue"></i>人工草皮</span>
+                </p>
+                <p class="ground-bar">
+                    <span class="ground-span"><i class="icon-person"></i>11人场</span>
+                </p>
+                <p class="ground-bar">
+                    <span class="ground-span"><i class="icon-location"></i>北京市海淀区海淀公园体育场23号院
+                    </span>
+                </p>
+                <div class="special-offers">
+                    <div class="offers-list">
+                        <p class="offers-p">
+                            <span class="tag bg-blue">信</span>指定信用卡指定金额
+                        </p>
+                        <p class="offers-p">
+                            <span class="tag bg-orange">折</span>指定信用卡指定金额
+                        </p>
+                        <p class="offers-p">
+                            <span class="tag bg-red1">减</span>消费满500立减100元
+                        </p>
+                        <p class="offers-p">
+                            <span class="tag bg-red2">优惠</span>消费满500立减100元
+                        </p>
+                    </div>
+                    <a href="javascript:;" class="offers-btn active">3个活动 <i class="icon-toggle"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-bd">
+                    <p class="bd-p">场地评分</p>
+                </div>
+                <div class="cuuju-cell-ft ">
+                    <div class="score-box">
+                        <div class="score-star">
+                            <em class="active"></em>
+                            <em class="active"></em>
+                            <em class="active"></em>
+                            <em class="active"></em>
+                            <em></em>
+                        </div>
+                        <span class="score-num">4分</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <a href="appoint.html" class="cuuju-cell">
+               <div class="cuuju-cell-bd">
+                    <p class="bd-p">空闲场地</p>
+                </div>
+                <div class="cuuju-cell-ft right-arrow"><span class="ft-span">更多</span> </div>
+            </a>
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-hd">
+                    <label class="cell-hd-label">今天 周一</label>
+                </div>
+                <div class="cuuju-cell-bd">
+                    <p class="font-theme text-center">￥240 -- ￥400</p>
+                </div>
+                <div class="cuuju-cell-ft "> 剩余<em class="font-green">10</em>场</div>
+            </div>
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-hd">
+                    <label class="cell-hd-label">明天 周二</label>
+                </div>
+                <div class="cuuju-cell-bd">
+                    <p class="font-theme text-center">￥240 -- ￥400</p>
+                </div>
+                <div class="cuuju-cell-ft "> 剩余<em class="font-green">10</em>场</div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-btn">
+        <div class="btn-bar"><a href="appoint.html" class="btn green-btn">场地预约</a></div>
+        <div class="btn-bar"><a href="javascript:;" class="btn theme-btn">电话咨询</a></div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        paginationType : 'fraction',
+        pagination: '.swiper-pagination',
+    });
+
+</script>
+</body>
+</html>

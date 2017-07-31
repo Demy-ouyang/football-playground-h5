@@ -1,0 +1,167 @@
+@charset "utf-8";
+// 任何手机屏幕上字体大小都要统一，所以我们针对不同的分辨率(dpr不同)
+.px2rem(@name, @px){
+    @{name}: @px / 75 * 1rem;
+}
+//不同dpr下都保持一致
+//适配函数
+.px2px(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+      @{name}: @px * 1px;
+  }
+  // for mx3
+  [data-dpr="2.5"] & {
+      @{name}: round(@px * 2.5 / 2) * 1px;
+  }
+  // for 小米note
+  [data-dpr="2.75"] & {
+      @{name}: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+      @{name}: round(@px / 2 * 3) * 1px
+  }
+  // for 三星note4
+  [data-dpr="4"] & {
+      @{name}: @px * 2px;
+  }
+}
+
+// flex布局
+.flex-box(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-align(@direction){
+  -webkit-box-align: @direction;
+  -webkit-align-items: @direction;
+  -ms-flex-align: @direction;
+  align-items: @direction;
+}
+.flex-width(@width){
+  -webkit-box-flex: @width;
+  -webkit-flex: @width;
+  -ms-flex: @width;
+  flex: @width;
+}
+//字体溢出
+.word-wrap(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap:normal;
+  -ms-word-wrap:break-word;
+  word-wrap:break-word;
+  word-break: break-all;
+
+}
+//
+.border-radius(@value:10px){
+  border-radius:@value;
+  -webkit-border-radiu:@value;
+  -moz-border-radiu:@value;
+}
+//
+.background-image(@value){
+  linear-gradient:@value;
+  -webkit-linear-gradient:@value;
+  -o-linear-gradient:@value;
+  -moz-linear-gradient:@value;
+}
+//
+.setTopLine(@c: @CellBorderColor) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid @c;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.setBottomLine(@c: @CellBorderColor) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid @c;
+  color: @c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.setLeftLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid @c;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+.setRightLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid @c;
+  color: @c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+
+.main-space(@size:30) {
+  .px2rem(padding-left,@size);.px2rem(padding-right,@size);
+}
+
+._setArrow(@arrowsize, @borderColor, @borderWidth){
+  display: inline-block;
+  height: @arrowsize;
+  width: @arrowsize;
+  border-width: @borderWidth @borderWidth 0 0;
+  border-color: @borderColor;
+  border-style: solid;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = top) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+  transform: matrix(0.71,-0.71,0.71,0.71,0,0); // rotate(-45deg)
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = right) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+  transform: matrix(0.71,0.71,-0.71,0.71,0,0); // rotate(45deg);
+
+  position: relative;
+  top: -2px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = down) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+  transform: matrix(-0.71,0.71,-0.71,-0.71,0,0); // rotate(135deg);
+
+  position: relative;
+  top: -3px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = left) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+  transform: matrix(-0.71,-0.71,0.71,-0.71,0,0); // rotate(-135deg);
+
+  position: relative;
+  top: -2px;
+}
+

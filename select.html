@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <title>球场列表--筛选</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="wrap foot-fixed">
+    <div class="content">
+        <div class="cuuju-cells">
+            <a href="#" class="cuuju-cell showDialog2">
+                <div class="cuuju-cell-bd">
+                    <p class="bd-p">区域</p>
+                </div>
+                <div class="cuuju-cell-ft right-arrow"> 北京</div>
+            </a>
+            <div class="cuuju-cell ">
+                <ul class="select-list">
+                    <li class="style1 active"><a href="javascript:;">不限</a></li>
+                    <li class="style1"><a href="javascript:;">石景山区</a></li>
+                    <li class="style1"><a href="javascript:;">房山区</a></li>
+                    <li class="style1"><a href="javascript:;" >西城区</a></li>
+                    <li class="style1"><a href="javascript:;">东城区</a></li>
+                    <li class="style1"><a href="javascript:;">海淀区</a></li>
+                    <li class="style1"><a href="javascript:;" >顺义区</a></li>
+                    <li class="style1"><a href="javascript:;">密云县</a></li>
+                    <li class="style1"><a href="javascript:;">怀柔县</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <div href="#" class="cuuju-cell">
+                <div class="cuuju-cell-bd">
+                    <p class="bd-p">场地人数</p>
+                </div>
+            </div>
+            <div class="cuuju-cell ">
+                <ul class="select-list">
+                    <li class="style1 active"><a href="javascript:;">不限</a></li>
+                    <li class="style1"><a href="javascript:;">5人场</a></li>
+                    <li class="style1"><a href="javascript:;">7人场</a></li>
+                    <li class="style1"><a href="javascript:;">8人场</a></li>
+                    <li class="style1"><a href="javascript:;">9人场</a></li>
+                    <li class="style1"><a href="javascript:;">11人场</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <div href="#" class="cuuju-cell">
+                <div class="cuuju-cell-bd">
+                    <p class="bd-p">场地价格</p>
+                </div>
+            </div>
+            <div class="cuuju-cell ">
+                <ul class="select-list">
+                    <li class="style1 active"><a href="javascript:;">不限</a></li>
+                    <li class="style2"><a href="javascript:;">500以下</a></li>
+                    <li class="style2"><a href="javascript:;">500到1000</a></li>
+                    <li class="style2"><a href="javascript:;">1000到2000</a></li>
+                    <li class="style2"><a href="javascript:;">2000以上</a></li>
+                    <li class="style1"><a href="javascript:;">自定义</a></li>
+                    <li class="style3">
+                        <span>￥</span>
+                        <em><input type="number" class="select-input"/></em>
+                    </li>
+                    <li class="style3">
+                        <span>￥</span>
+                        <em><input type="number" class="select-input"/></em>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot-btn ">
+        <div class="btn-bar"><a href="javascript:;" class="btn green-btn">一共有17个场地</a></div>
+    </div>
+</div>
+<!--弹出层start-->
+<div id="dialogs">
+    <!--弹出层1-->
+    <div class="dialog-pop" id="Dialog2">
+        <div class="mask" ></div>
+        <div class="pop-box" >
+            <div class="pop-title">
+                <h3>选择区域</h3>
+                <a class="close-pop" href="#"> X</a>
+            </div>
+            <div class="pop-body">
+                <div class="cuuju-cells cuuju-cells_radio">
+                    <label class="cuuju-cell cuuju-check-label" for="check31">
+                        <div class="cuuju-cell-bd">
+                            北京
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check31" checked>
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check32">
+                        <div class="cuuju-cell-bd">
+                            天津
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check32">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check33">
+                        <div class="cuuju-cell-bd">
+                           内蒙古
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check33">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check34">
+                        <div class="cuuju-cell-bd">
+                            山西
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check34">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <a href="javascript:;" class="com-btn">确定</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--弹出层end-->
+</body>
+</html>

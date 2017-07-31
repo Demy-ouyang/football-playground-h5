@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <title>付款页面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="wrap foot-fixed">
+    <div class="time-underline">
+        <span class="time-span">
+            <em class="time-em">15</em>
+            <em>:</em>
+            <em class="time-em">00</em>
+        </span>
+        请在15分钟内完成付款
+    </div>
+    <div class="content ">
+        <div class="ground-panel cuuju-cells">
+            <div class="panel-title">
+                <div class="ground-pic3"><img src="images/pic1.jpg" alt=""/></div>
+                <div class="ground-detail">
+                    <p class="price price2"><span >￥1480</span></p>
+                    <h3 class="panel-h3">北京海淀区鸟巢国家体育馆</h3>
+                </div>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-hd">
+                    <p class="bd-p">优惠方式</p>
+                </div>
+            </div>
+            <a href="javascript:;" class="cuuju-cell showDialog1">
+                <div class="cuuju-cell-bd">
+                    <p class="offers-p ground-p2">
+                        <span class="tag bg-red2">减</span>店家活动，满1000减50
+                    </p>
+                </div>
+                <div class="cuuju-cell-ft right-arrow"> -50</div>
+            </a>
+            <a href="javascript:;" class="cuuju-cell showDialog1">
+                <div class="cuuju-cell-bd">
+                    <p class="offers-p ground-p2">
+                        <span class="tag bg-red2">减</span>店家活动，满1000减50
+                    </p>
+                </div>
+                <div class="cuuju-cell-ft right-arrow"> -10</div>
+            </a>
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-bd">
+                    <p class=" text-right">实付：<span class="disc-big2 font-theme">￥1420</span> </p>
+                </div>
+            </div>
+        </div>
+        <div class="cuuju-cells cuuju-cells_radio">
+            <div class="cuuju-cell">
+                <div class="cuuju-cell-hd">
+                    <p class="bd-p">付款方式</p>
+                </div>
+            </div>
+            <label class="cuuju-cell cuuju-check-label" for="check1">
+                <div class="cuuju-cell-bd">
+                    <p class="ground-p2"><i class="icon-wx"></i>微信支付</p>
+                </div>
+                <div class="cuuju-cell-ft">
+                    <input type="radio" class="cuuju-check" name="radio1" id="check1" checked>
+                    <i class="cuuju-icon-checked "></i>
+                </div>
+            </label>
+            <label class="cuuju-cell cuuju-check-label" id="pay-card-btn" for="check2">
+                <div class="cuuju-cell-bd">
+                    <p class="ground-p2"><i class="icon-card"></i>会员卡支付</p>
+                </div>
+                <div class="cuuju-cell-ft">
+                    <input type="radio" class="cuuju-check" name="radio1" id="check2" >
+                    <i class="cuuju-icon-checked"></i>
+                </div>
+            </label>
+            <div class="cuuju-cells cuuju-cell-toggle" id="pay-card-box" >
+                <div class="cuuju-cells cuuju-check-cells">
+                    <label class="cuuju-cell cuuju-check-label"  for="check4">
+                        <div class="cuuju-cell-hd">
+                            <input type="radio" class="cuuju-check" name="radio2" id="check4" >
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                        <div class="cuuju-cell-bd">
+                            <p class="ground-p2">会员卡</p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <span class="number-span"  > 18636688455</span>
+                        </div>
+                    </label>
+                    <div class="cuuju-cell cuuju-money-cell">
+                        <div class="cuuju-cell-bd">
+                            当前余额
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <span class="font-green">￥1866</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cuuju-cells cuuju-check-cells">
+                    <label class="cuuju-cell cuuju-check-label"  for="check5">
+                        <div class="cuuju-cell-hd">
+                            <input type="radio" class="cuuju-check" name="radio2" id="check5" >
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                        <div class="cuuju-cell-bd">
+                            <p class="ground-p2">会员卡</p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <span class="number-span"  > 18636688455</span>
+                        </div>
+                    </label>
+                    <div class="cuuju-cell cuuju-money-cell">
+                        <div class="cuuju-cell-bd">
+                            当前余额<span class="font-small">当前余额不足，请更换其他方式支付</span>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <span class="font-red">￥866</span>
+                        </div>
+                    </div>
+                </div>
+                <label class="cuuju-cell cuuju-check-label"  for="check3">
+                    <div class="cuuju-cell-hd">
+                        <input type="radio" class="cuuju-check" name="radio2" id="check3" >
+                        <i class="cuuju-icon-checked"></i>
+                    </div>
+                    <div class="cuuju-cell-bd">
+                        <p class="ground-p2">会员卡</p>
+                    </div>
+                    <div class="cuuju-cell-ft">
+                        <input type="tel" class="number-input" maxlength="12" placeholder="请输入卡号"/>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="foot-btn ">
+        <div class="btn-bar"><a href="#" class="btn green-btn showDialog2">确认支付￥1278</a></div>
+    </div>
+</div>
+<!--弹出层start-->
+<div id="dialogs">
+    <!--弹出层1-->
+    <div class="dialog-pop" id="Dialog1">
+        <div class="mask" ></div>
+        <div class="pop-box" >
+            <div class="pop-title">
+                <h3>场地优惠券</h3>
+                <a class="close-pop" href="#"> X</a>
+            </div>
+            <div class="pop-body">
+                <div class="cuuju-cells cuuju-cells_radio">
+                    <label class="cuuju-cell cuuju-check-label" for="check31">
+                        <div class="cuuju-cell-bd">
+                            <p class="offers-p ">
+                               不选择优惠
+                            </p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check31" checked>
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check32">
+                        <div class="cuuju-cell-bd">
+                            <p class="offers-p ">
+                                <span class="tag bg-red2">减</span>店家活动，满1000减100
+                            </p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check32">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check33">
+                        <div class="cuuju-cell-bd">
+                            <p class="offers-p ">
+                                <span class="tag bg-red2">减</span>店家活动，满1000减50
+                            </p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check33">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                    <label class="cuuju-cell cuuju-check-label" for="check34">
+                        <div class="cuuju-cell-bd">
+                            <p class="offers-p ">
+                                <span class="tag bg-red2">减</span>店家活动，满1000减10
+                            </p>
+                        </div>
+                        <div class="cuuju-cell-ft">
+                            <input type="radio" class="cuuju-check" name="radio3" id="check34">
+                            <i class="cuuju-icon-checked"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <a href="javascript:;" class="com-btn">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--手机验证-->
+    <div class="dialog-pop dialog-small-pop" id="Dialog2">
+        <div class="mask" ></div>
+        <div class="pop-box" >
+            <div class="pop-title">
+                <h3>支付费用</h3>
+                <a class="close-pop" href="#"> X</a>
+            </div>
+            <div class="pop-body">
+                <div class="check-body">
+                    <span class="money-num">￥1278</span>
+                    <p class="money-p">验证码已发送至186******8272，请输入手机验证码</p>
+                    <div class="code-password">
+                        <div class="code-input-panel">
+                            <input type="number" class="code-input" />
+                        </div>
+                        <a href="javascript:;" class="code-btn" ><em>60</em>s后重试</a>
+                      <!--  <a href="javascript:;" class="code-btn code-btn2">再次发送</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <a href="javascript:;" class="com-btn">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--支付密码-->
+    <div class="dialog-pop dialog-small-pop" id="Dialog3">
+        <div class="mask" ></div>
+        <div class="pop-box" >
+            <div class="pop-title">
+                <h3>支付费用</h3>
+                <a class="close-pop" href="#"> X</a>
+            </div>
+            <div class="pop-body">
+                <div class="check-body">
+                    <span class="money-num">￥1278</span>
+                    <p class="money-p">请输入支付密码</p>
+                    <div class="code-password">
+                        <div class="code-input-panel code-input-panel2">
+                            <input type="number" class="code-input" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <a href="javascript:;" class="com-btn">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--弹出层end-->
+</body>
+</html>
