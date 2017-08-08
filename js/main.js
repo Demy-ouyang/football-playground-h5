@@ -1,6 +1,3 @@
-/**
- * Created by Gnet on 2017/4/14.
- */
 /*折叠*/
 $(function(){
     var winH = $(window).height();
